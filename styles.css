@@ -65,6 +65,7 @@ li {
     float: left;
     margin-top: 30px;;
     height: 400px;
+    width: 300px;
     padding: 20px;
     text-align: center;
     background-color: rgba(0, 128, 0, 0.425);
@@ -77,13 +78,14 @@ li {
 }
 
 .parametr input{
-    width: 70px;
+    width: 100px;
     height: 30px;
     text-align: center;
     color: red;
     padding: 3px;
     font-weight: 600;
 }
+
 
 .result{
     width: 150px;
@@ -97,6 +99,8 @@ li {
     padding: 9px;
     text-align: center;
     line-height: 28px;
+    margin: 50px auto;
+    margin-bottom: 20px;
 }
 
 .btn{

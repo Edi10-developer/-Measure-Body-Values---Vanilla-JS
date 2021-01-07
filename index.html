@@ -37,21 +37,37 @@
     </div>
     <!-- Body Mass End -->
 
-      <!-- Body Mass Start -->
+      <!-- Basal Metabolism Start -->
       <div class="parametr">
-        <h2>Body Mass</h2>
+          <h2>Basal Metabolism</h2>
         <p>
-            <label>Weight</label><br/>
-            <input type="number" id="weight" placeholder="Kg" />
+            <label>Age</label><br/>
+            <input type="number" id="age" placeholder="Years Old" />
         </p>
         <p>
-            <label>Height</label><br/>
-            <input type="number" id="height" value="Weight" placeholder="cm" />
+            <input type="radio" name="sex" id="sexM" value="male"> Male
+            <input type="radio" name="sex" id="sexM"  value="female"> Female
         </p>
-        <input class="btn" type="submit" onClick="bodyMass()" value="Calculate" />
-        <div class="result" id="result"></div>
+        <input class="btn" type="submit" onClick="basalMetabolism()" value="Calculate" />
+        <div class="result" id="resultBm"></div>
     </div>
-    <!-- Body Mass End -->
+    <!-- Basal Metabolism End -->
+
+          <!-- Basal Metabolism Start -->
+          <div class="parametr">
+            <h2>Basal Metabolism</h2>
+          <p>
+              <label>Age</label><br/>
+              <input type="number" id="age" placeholder="Years Old" />
+          </p>
+          <p>
+              <input type="radio" name="sex" id="sexM" value="male"> Male
+              <input type="radio" name="sex" id="sexM"  value="female"> Female
+          </p>
+          <input class="btn" type="submit" onClick="basalMetabolism()" value="Calculate" />
+          <div class="result" id="resultBm"></div>
+      </div>
+      <!-- Basal Metabolism End -->
 
 </div>
     <script type="text/javascript" src="./main.js"></script>
