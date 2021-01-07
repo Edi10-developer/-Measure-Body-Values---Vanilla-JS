@@ -26,8 +26,10 @@ function basalMetabolism(){
     body.push(age);
     body.push(sex);
     body.push(bM);
-    
+
     result.innerHTML = bM + ' KCal';
+
+    fillLeansData();
 }
 
 function calculateBasalMetabolism(age, sex){
@@ -79,3 +81,74 @@ function calculateCaloricNeeds(lifeStyle, weight, sex){
     }
     return dCN;
 }
+
+
+// Calculate Leans Body Mass
+function leanBodyMass(){
+    let result = document.getElementById('resultLBM');
+    let weight = body[0];
+    let height = body[1];
+    let sex = body[3];
+    let lBM = Math.round(calculateLeansBodyMass(weight, height, sex));
+
+    result.innerHTML = lBM + ' Kg';
+}
+
+function calculateLeansBodyMass(weight, height, sex){
+   // let abdomenCircunference = parseInt(document.getElementById('abdomenCircunference').value);
+  //  let hipCircunference = parseInt(document.getElementById('hipCircunference').value);
+   // let neckCircunference = parseInt(document.getElementById('neckCircunference').value);
+
+   // let MASSAGRASSA = hipCircunference + abdomenCircunference - height;
+  
+    if(sex == 'male'){
+        lBM = (1.10 * weight) - (128 * (weight * weight) / (height * height));
+    }else if(sex == 'female'){
+        lBM = (1.07 * weight) - (148 * (weight * weight) / (height * height));
+    }else{
+        alert("Please fill the form with correct information");
+    }
+    return lBM;
+}
+
+function fillLeansData(){
+    let leansDiv = document.getElementById('leansDiv');
+    let weight = body[0];
+    let height = body[1];
+    let sex = body[3];
+
+    leansDiv.innerHTML = `
+    <p>
+    <label>Weight</label><br/>
+    <input type="text" placeholder="${weight}" disabled/>
+    </p>
+    <p>
+    <label>Hight</label><br/>
+    <input type="text" placeholder="${height}" disabled/>
+    </p>
+    <p>
+    <label>Sex</label><br/>
+    <input type="text" value="${sex}" disabled/>
+    </p> 
+    `;
+}
+
+
+/*
+
+MASSA GRASSA
+
+ <p>
+    <label>Abdomen Circunference</label><br/>
+    <input type="number placeholder="cm" id="abdomenCircunference"/>
+    </p>
+    <p>
+    <label>Hip Circunference</label><be/>
+    <input type="number" value="cm" id="abdomenCircunference" />
+    </p>
+    <p>
+    <label>Neck Circunference</label><be/>
+    <input type="number" value="cm" id="neckCircunference" />
+    </p>
+
+*/
