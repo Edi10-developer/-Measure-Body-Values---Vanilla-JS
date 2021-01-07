@@ -69,6 +69,7 @@ li {
     text-align: center;
     background-color: rgba(0, 128, 0, 0.425);
     border: 1px solid black;
+    margin-left: 20px;
 }
 
 .parametr p{
@@ -82,4 +83,25 @@ li {
     color: red;
     padding: 3px;
     font-weight: 600;
+}
+
+.result{
+    width: 150px;
+    height: 30px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.87);
+    border-radius: 7px;
+    border: 1px solid green;
+    color: green;
+    font-weight: bold;
+    padding: 9px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.btn{
+    background-color: green;
+    color: white !important;
+    border-radius: 5px;
+    padding: 9px;
 }

@@ -21,19 +21,37 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- IMC Start -->
+    <!-- Body Mass Start -->
     <div class="parametr">
-        <h2>IMC</h2>
+        <h2>Body Mass</h2>
         <p>
             <label>Weight</label><br/>
-            <input type="number" id="weight" value="Weight" />
+            <input type="number" id="weight" placeholder="Kg" />
         </p>
         <p>
             <label>Height</label><br/>
-            <input type="number" id="height" value="Weight" />
+            <input type="number" id="height" value="Weight" placeholder="cm" />
         </p>
-        
+        <input class="btn" type="submit" onClick="bodyMass()" value="Calculate" />
+        <div class="result" id="result"></div>
     </div>
+    <!-- Body Mass End -->
+
+      <!-- Body Mass Start -->
+      <div class="parametr">
+        <h2>Body Mass</h2>
+        <p>
+            <label>Weight</label><br/>
+            <input type="number" id="weight" placeholder="Kg" />
+        </p>
+        <p>
+            <label>Height</label><br/>
+            <input type="number" id="height" value="Weight" placeholder="cm" />
+        </p>
+        <input class="btn" type="submit" onClick="bodyMass()" value="Calculate" />
+        <div class="result" id="result"></div>
+    </div>
+    <!-- Body Mass End -->
 
 </div>
     <script type="text/javascript" src="./main.js"></script>
