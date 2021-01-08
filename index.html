@@ -45,8 +45,11 @@
             <input type="number" id="age" placeholder="Years Old" />
         </p>
         <p>
-            <input type="radio" name="sex" id="sexM" value="male"> Male
-            <input type="radio" name="sex" id="sexM"  value="female"> Female
+            <label>Male &nbsp;&nbsp;</label>
+            <input type="radio" name="sex" id="sexM" value="male"> 
+       <br/>
+            <label>Female</label>
+            <input type="radio" name="sex" id="sexM"  value="female"> 
         </p>
         <input class="btn" type="submit" onClick="basalMetabolism()" value="Calculate" />
         <div class="result" id="resultBm"></div>
@@ -81,6 +84,30 @@
           </div>
           <!--Lean Body Mass End -->
 
+          <!-- Fat Body Mass Start -->
+          <div class="parametr massParametr">
+            <h2>Fat Body Mass</h2>
+            <p id="heightFatData">
+            </p>
+            <!--
+                <p>
+                <label>Abdomen Circunference</label><br/>
+                <input type="number" placeholder="cm" id="abdomenCircunference"/>
+            </p>
+            <p>
+                <label>Hip Circunference</label><br/>
+                <input type="number" placeholder="cm" value="cm" id="hipCircunference" />
+            </p>
+            <p>
+                <label>Neck Circunference</label><br/>
+                <input type="number" placeholder="cm" value="cm" id="neckCircunference" />
+            </p>
+        -->
+
+            <input class="btn" type="submit" onClick="fatBodyMass()" value="Calculate" />
+          <div class="result" id="resultFBM"></div>
+      </div>
+      <!--Fat Body Mass End -->
 </div>
     <script type="text/javascript" src="./main.js"></script>
 </body>

@@ -68,12 +68,12 @@ li {
     margin-top: 30px;;
     height: 380px;
     width: 300px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color: rgba(0, 128, 0, 0.425);
     border: 1px solid black;
     margin-left: 20px;
-  
+    overflow: hidden;
 }
 
 .parametr p{
@@ -91,7 +91,7 @@ li {
 
 .input{
     width: 100px;
-    height: 30px;
+    height: 20px;
     border: 1px solid black;
     background-color: whitesmoke;
 }
@@ -105,7 +105,7 @@ li {
 }
 
 .result{
-    width: 150px;
+    width: 200px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.87);
     border-radius: 7px;
@@ -114,8 +114,9 @@ li {
     font-weight: bold;
     padding: 9px;
     text-align: center;
-    line-height: 28px;
+    line-height: 30px;
     margin: 10px auto;
+    margin-bottom: 10px;
 }
 
 .btn{
@@ -124,4 +125,8 @@ li {
     border-radius: 5px;
     padding: 9px;
     margin: 20px auto;
+}
+
+.massParametr{
+    background-color: rgba(255, 0, 0, 0.425);
 }
