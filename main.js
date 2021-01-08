@@ -91,7 +91,8 @@ function leanBodyMass() {
 
   result.innerHTML = lBM + " Kg";
 
-  fillFatBodyMassData()
+  body.push(lBM);
+  fillFatBodyMassData();
 }
 
 function calculateLeansBodyMass(weight, height, sex) {
@@ -135,11 +136,6 @@ function fillLeansData() {
 
 // Fat Body Mass
 function fatBodyMass() {
-  /*
-  let abdomenCircunference = parseInt(document.getElementById("abdomenCircunference").value);
-  let hipCircunference = parseInt(document.getElementById("hipCircunference").value);
-  let height = body[1];
-  */
   let sex = body[4];
   let imc = body[2];
   let age = body[3];
@@ -160,6 +156,10 @@ function fatBodyMass() {
   }
 
   result.innerHTML = fBM + "% - " + message;
+
+  body.push(fBM);
+  body.push(message);
+  fillWaterBodyBalanceData();
 }
 
 function calculateFatBodyMass(sex, imc, age) {
@@ -175,12 +175,12 @@ function calculateFatBodyMass(sex, imc, age) {
 }
 
 function fillFatBodyMassData() {
-    let heightFatData = document.getElementById("heightFatData");
-    let imc = body[2];
-    let age = body[3];
-    let sex = body[4];
-  
-    heightFatData.innerHTML = `
+  let heightFatData = document.getElementById("heightFatData");
+  let imc = body[2];
+  let age = body[3];
+  let sex = body[4];
+
+  heightFatData.innerHTML = `
       <p>
       <label>Age</label><br/>
       <input type="text" placeholder="${age}" disabled/>
@@ -194,22 +194,25 @@ function fillFatBodyMassData() {
       <input type="text" value="${imc}" disabled/>
       </p> 
       `;
-  }
-/*
+}
 
-MASSA GRASSA
+// Body Water Balance
+function waterBalance() {
+  let weight = body[0];
+  let result = document.getElementById("resultWater");
+  let wBB = (weight / 100) * 60;
 
- <p>
-    <label>Abdomen Circunference</label><br/>
-    <input type="number placeholder="cm" id="abdomenCircunference"/>
-    </p>
-    <p>
-    <label>Hip Circunference</label><be/>
-    <input type="number" value="cm" id="abdomenCircunference" />
-    </p>
-    <p>
-    <label>Neck Circunference</label><be/>
-    <input type="number" value="cm" id="neckCircunference" />
-    </p>
+  result.innerHTML = wBB + "L";
+}
 
-*/
+function fillWaterBodyBalanceData() {
+    let weight = body[0];
+  let heightFatData = document.getElementById("waterDiv");
+
+  heightFatData.innerHTML = `
+      <p>
+      <label>Weight</label><br/>
+      <input type="text" placeholder="${weight}" disabled/>
+      </p>
+      `;
+}

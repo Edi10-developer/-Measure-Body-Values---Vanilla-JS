@@ -1,3 +1,14 @@
+@font-face{
+    font-family: Goldman;
+    src: url(./assets/Goldman/Goldman-Regular.ttf) format('truetype');
+    src: url(./assets/Goldman/Goldman-Bold.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: Yusei;
+    src: url(./assets/Yusei_Magic/YuseiMagic-Regular.ttf) format('truetype');
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -8,6 +19,8 @@ body{
     background-image: url(./img/fitness.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Goldman;
+
  
 }
 
@@ -82,7 +95,7 @@ li {
 
 .input, .parametr input, #selectLifeStyle option{
     width: 100px;
-    height: 30px;
+    height: 20px;
     text-align: center;
     color: red;
     padding: 3px;
@@ -125,8 +138,17 @@ li {
     border-radius: 5px;
     padding: 9px;
     margin: 20px auto;
+    height: 30px !important;
 }
 
 .massParametr{
     background-color: rgba(255, 0, 0, 0.425);
+}
+
+.waterParametr{
+    background-color: rgba(0, 0, 255, 0.408);
+}
+
+label{
+    font-family: Yusei;
 }

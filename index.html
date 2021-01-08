@@ -67,18 +67,15 @@
                 <option value="hard">Intense physical activity (+5 times/week )</option>
             </select>
           </p>
-          <input class="btn" type="submit" onClick="dailyCaloricNeeds()" value="Calculate" />
-          <div class="result" id="resultdCN"></div>
-      </div>
-      <!-- Daily Caloric Needs End -->
+           <input class="btn" type="submit" onClick="dailyCaloricNeeds()" value="Calculate" />
+           <div class="result" id="resultdCN"></div>
+         </div>
+         <!-- Daily Caloric Needs End -->
 
-               <!-- Lean Body Mass Start -->
+          <!-- Lean Body Mass Start -->
                <div class="parametr">
                 <h2>Lean Body Mass</h2>
-              <p id="leansDiv">
-                
-                </p>
-
+              <p id="leansDiv"></p>
                 <input class="btn" type="submit" onClick="leanBodyMass()" value="Calculate" />
               <div class="result" id="resultLBM"></div>
           </div>
@@ -87,8 +84,7 @@
           <!-- Fat Body Mass Start -->
           <div class="parametr massParametr">
             <h2>Fat Body Mass</h2>
-            <p id="heightFatData">
-            </p>
+            <p id="heightFatData"></p>
             <!--
                 <p>
                 <label>Abdomen Circunference</label><br/>
@@ -108,6 +104,16 @@
           <div class="result" id="resultFBM"></div>
       </div>
       <!--Fat Body Mass End -->
+
+      <!-- Body Water Balance Start -->
+        <div class="parametr waterParametr">
+            <h2>Body Water Balance</h2>
+          <p id="waterDiv"></p>
+            <input class="btn" type="submit" onClick="waterBalance()" value="Calculate" />
+          <div class="result" id="resultWater"></div>
+      </div>
+      <!-- Body Water Balance End -->
+
 </div>
     <script type="text/javascript" src="./main.js"></script>
 </body>
