@@ -203,10 +203,13 @@ function waterBalance() {
   let wBB = (weight / 100) * 60;
 
   result.innerHTML = wBB + "L";
+  
+  body.push(wBB);
+  fillBodyBoneMassData();
 }
 
 function fillWaterBodyBalanceData() {
-    let weight = body[0];
+  let weight = body[0];
   let heightFatData = document.getElementById("waterDiv");
 
   heightFatData.innerHTML = `
@@ -215,4 +218,27 @@ function fillWaterBodyBalanceData() {
       <input type="text" placeholder="${weight}" disabled/>
       </p>
       `;
+}
+
+// Body Bone Mass
+function bodyBoneMass() {
+  let weight = body[0];
+  let result = document.getElementById("resultBone");
+  let bBM = Math.round(((weight / 100) * 3) * 100) / 100;
+
+  result.innerHTML = bBM + "Kg";
+
+  body.push(bBM);
+}
+
+function fillBodyBoneMassData() {
+  let weight = body[0];
+  let bodyBoneData = document.getElementById("boneDiv");
+
+ bodyBoneData.innerHTML = `
+        <p>
+        <label>Weight</label><br/>
+        <input type="text" placeholder="${weight}" disabled/>
+        </p>
+        `;
 }
