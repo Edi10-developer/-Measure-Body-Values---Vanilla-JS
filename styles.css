@@ -15,7 +15,7 @@
 }
 
 body{
-    padding: 10px;   
+    padding: 30px;   
     background-image: url(./img/fitness.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +25,8 @@ body{
 }
 
 .container{
-    height: 1800px;
+    display: flexbox;
+    height: auto;
     background-color: rgba(240, 248, 255, .6);
     padding: 10px;
 }
@@ -109,9 +110,7 @@ li {
     background-color: whitesmoke;
 }
 
-.parametr:nth-child(5), .parametr:nth-child(8){
-    margin-left: 124px;
-}
+
 
 #selectLifeStyle{
    margin-bottom: 80px;
@@ -141,6 +140,16 @@ li {
     height: 30px !important;
 }
 
+.btn-body{
+    width: 700px;
+    margin: 0 auto !important;
+    margin-top: 40% !important;
+    height: 50px !important;
+    margin-left: -170px !important;
+    padding: 50px;
+    background-color: red;
+}
+
 .massParametr{
     background-color: rgba(255, 0, 0, 0.425);
 }
@@ -151,4 +160,37 @@ li {
 
 label{
     font-family: Yusei;
+}
+
+#resultBodyStatus{
+    width: 820px;
+    min-height: 200px;
+    border: 1px solid black;
+    margin: 20px auto;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+#resultBodyStatus p{
+    margin-bottom: 10px;
+    font-family: Yusei
+}
+
+/********************************************************************
+                          RESPONSIVE
+********************************************************************/
+@media(min-width: 100px){
+.container{
+  padding: 20px;
+}
+.wrapper{
+    display: flexbox;
+    flex-direction: row;
+    float: left;
+   
+}
+
+.parametr{
+    margin-left: 3%;
+}
 }

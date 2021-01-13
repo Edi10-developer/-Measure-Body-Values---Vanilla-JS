@@ -21,8 +21,9 @@
     </nav>
     <!-- Navbar End -->
 
+    <div class="wrapper">
     <!-- Body Mass Start -->
-    <div class="parametr">
+    <div class="parametr div1">
         <h2>Body Mass</h2>
         <p>
             <label>Weight</label><br/>
@@ -38,7 +39,7 @@
     <!-- Body Mass End -->
 
       <!-- Basal Metabolism Start -->
-      <div class="parametr">
+      <div class="parametr div2">
           <h2>Basal Metabolism</h2>
         <p>
             <label>Age</label><br/>
@@ -57,7 +58,7 @@
     <!-- Basal Metabolism End -->
 
           <!-- Daily Caloric Needs Start -->
-          <div class="parametr">
+          <div class="parametr div3">
             <h2>Daily Caloric Needs</h2>
           <p>
               <label>Life Style</label><br/>
@@ -73,7 +74,7 @@
          <!-- Daily Caloric Needs End -->
 
           <!-- Lean Body Mass Start -->
-               <div class="parametr">
+               <div class="parametr div4">
                 <h2>Lean Body Mass</h2>
               <p id="leansDiv"></p>
                 <input class="btn" type="submit" onClick="leanBodyMass()" value="Calculate" />
@@ -106,7 +107,7 @@
       <!--Fat Body Mass End -->
 
       <!-- Body Water Balance Start -->
-        <div class="parametr waterParametr">
+        <div class="parametr waterParametr div5">
             <h2>Body Water Balance</h2>
           <p id="waterDiv"></p>
             <input class="btn" type="submit" onClick="waterBalance()" value="Calculate" />
@@ -114,8 +115,9 @@
       </div>
       <!-- Body Water Balance End -->
       
+    </div>
       <!-- Body Bone Mass Start -->
-      <div class="parametr waterParametr">
+      <div class="parametr waterParametr div6">
         <h2>Body Bone Mass</h2>
       <p id="boneDiv"></p>
         <input class="btn" type="submit" onClick="bodyBoneMass()" value="Calculate" />
@@ -123,6 +125,40 @@
   </div>
   <!-- Body Bone Mass End -->
 
+  <!-- Zodiac Sign Start -->
+  <div class="parametr div2">
+    <h2>Zodiac Sign</h2>
+    <h3>Born in:</h3>
+  <p>
+      <label>Month</label>
+      <input type="number" id="month" placeholder="Number" /> 
+  </p>
+  <p>
+    <label>Day</label>
+    <input type="number" id="day" placeholder="Number" />
+</p>
+  <input class="btn" type="submit" onClick="zodiacSign()" value="Calculate" />
+  <div class="result" id="resultSign"></div>
+</div>
+<!--Zodiac Sign End -->
+
+<!-- Happiness Start -->
+<div class="parametr div2">
+  <h2>Happiness</h2>
+<p>
+    <label>How much does yor life satisfy you (min 1 - max 10):</label><br/>
+    <input type="number" id="happyVal" min="0" max="10" placeholder="0 Nothing - 10 Totaly" />
+</p>
+<input class="btn" type="submit" onClick="happiness()" value="Calculate" />
+<div class="result" id="resultHappiness"></div>
+</div>
+<!-- Happiness End -->
+<div>
+
+  <input class="btn btn-body" type="submit" value="Body State" onClick="getBodyValue()" />
+  <div id="resultBodyStatus"></div>
+</div>
+ 
 </div>
     <script type="text/javascript" src="./main.js"></script>
 </body>
